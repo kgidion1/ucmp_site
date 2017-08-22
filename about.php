@@ -2,27 +2,29 @@
 <style type="text/css">
 #about_us{
   background: url("./images/abt.jpg") no-repeat !important;
-  background-size: cover;
+ /* background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
   padding: 20px 10px;
-  padding-top: 400px;
+  padding-top: 200px;*/
+   background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 39.9px 10px;
+  padding-top: 200px;
 }
 </style>
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav_trans.php'; ?>
+      <?php include 'nav.php'; ?>
         <!-- header end-->
-       <div id="about_us">
+       <div id="about_us" style="background: #888;">
             <div class="container-fluid">
                 <div class="row">
-                 <!-- <div class="col-sm-3 animated fadeInLeft" data-wow-delay="0.1s">
-                       <img src="images/ucmp.png" style="margin-top:-8em; !important"/>
-                    </div> -->
-                    <div class="col-sm-3 col-sm-push-9" style=" margin-top: -15.2em;">
-                        <h1 style="font-size: 45px; color: #fff !important;text-transform:
-                         uppercase; text-shadow: 20px 20px 20px 20px #000 !important;">About Us</h1>
+                    <div class="col-sm-3 col-sm-push-9" style=" margin-top:0em;">
+                        <h1 style="font-size: 25px; color: #fff;background: #444;padding:5px;text-transform:
+                         uppercase;">About Us</h1>
                     </div>
                 </div>
             </div>

@@ -73,11 +73,29 @@
 
     #archives {
         background: url("images/AR.JPG") no-repeat !important;
-        background-size: cover;
+        /*background-size: cover;
         background-position: 0 0;
         background-attachment: fixed;
         padding: 20px 10px;
-        padding-top: 400px;
+        padding-top: 400px;*/
+        background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 200px;
+}
+
+.box-style-1 h3 {
+    text-transform: capitalize;
+    font-size: 10px !important;
+    font-weight: 100;
+}
+.box-style-1 ,.border-style {
+    border: 1px solid #888 !important;
+    padding: 15px;
+    height: 170px;
+    border-radius: 5px;
+}
 
 </style>
 
@@ -85,7 +103,7 @@
 <body>
 <!--<div id="preloader"></div>-->
 <!-- header -->
-<?php include 'nav_trans.php'; ?>
+<?php include 'nav.php'; ?>
 <!-- header end-->
 <div id="archives">
     <div class="container-fluid">
@@ -94,22 +112,22 @@
                   <img src="images/ucmp.png" width="250x250" style="margin-top:-8em !important"/>
                </div> -->
 
-            <div class="col-sm-3 col-sm-push-9" style=" margin-top: -15.2em;">
-                <h1 style="font-size: 45px; color: #fff;text-transform: uppercase;">
+            <div class="col-sm-3 col-sm-push-9" style="margin-top:0em;">
+                <h1 style="font-size: 25px; color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
                     Archives </h1>
             </div>
         </div>
-    </div>
+    </div><br><br><br>
 </div><!--breadcrumb end-->
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="">
             <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-primary" role="tablist">
-                    <li role="tab" class="active">
+                    <li role="tab">
                         <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Conferences</a></li>
-                    <li role="tab"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Workshops</a></li>
+                    <li role="tab" class="active"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Workshops</a></li>
                     <li role="tab"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Seminars</a></li>
                     <li role="tab"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Presentations</a>
                     </li>
@@ -119,7 +137,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content tab-content-default" style="border: 0 !important;">
-                    <div role="tabpanel" class="tab-pane active" id="tab1">
+                    <div role="tabpanel" class="tab-pane" id="tab1">
                         <div class="row ">
                             <?php
                             $conference_sql = "SELECT * FROM archives WHERE category = 'Conferences' ORDER BY id DESC";
@@ -141,7 +159,7 @@
                             <div class='box-style-1 border-style  margin-b-30'>
                              <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
                                 <div class='space-20'></div>
-                                <h3>$cname</h3>
+                                <h3 class='ar_name' >".substr($cname, 0,20)."....</h3>
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$cfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
@@ -158,7 +176,7 @@
                         </div>
 
                     </div>
-                    <div role="tabpanel" class="tab-pane" id="tab2">
+                    <div role="tabpanel" class="tab-pane active" id="tab2">
                         <div class="row">
                             <?php
                             $workshop_sql = "SELECT * FROM archives WHERE category = 'Workshops' ORDER BY id DESC";
@@ -181,7 +199,7 @@
                             <div class='box-style-1 border-style  margin-b-30'>
                              <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
                                 <div class='space-20'></div>
-                                <h3>$wname</h3>
+                                <h3>".substr($wname, 0,20)."....</h3>
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$wfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
@@ -220,7 +238,7 @@
                             <div class='box-style-1 border-style  margin-b-30'>
                              <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
                                 <div class='space-20'></div>
-                                <h3>$sname</h3>
+                                <h3>".substr($sname, 0,20)."....</h3>
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$sfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
@@ -260,7 +278,7 @@
                             <div class='box-style-1 border-style  margin-b-30'>
                              <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
                                 <div class='space-20'></div>
-                                <h3>$pname</h3>
+                                <h3>".substr($pname, 0,20)."....</h3>
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$pfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>

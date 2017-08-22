@@ -35,10 +35,11 @@ if(isset($_POST['submit'])){
     #contact{
   background: url("images/cont.JPG") no-repeat !important;
   background-size: cover;
+  /*background:rgba(0,0,0,.8);*/
   background-position: 0 0;
   background-attachment: fixed;
-  padding: 20px 10px;
-  padding-top: 400px;
+  padding: 40px 10px;
+  padding-top: 200px;
 }
 
 
@@ -48,17 +49,13 @@ if(isset($_POST['submit'])){
 <!--
         <div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav_trans.php'; ?>
+      <?php include 'nav.php'; ?>
         <!-- header end-->
       <div id="contact">
             <div class="container-fluid">
                 <div class="row">
-                  <!-- <div class="col-sm-3 animated fadeInLeft" data-wow-delay="0.1s">
-                       <img src="images/ucmp.png" style="margin-top:-8em !important;"/>
-                    </div> -->
-
-                    <div class="col-sm-3 col-sm-push-9" style=" margin-top: -12.5em;">
-                        <h1 style="font-size: 45px; color: #fff;text-transform: uppercase;">
+                    <div class="col-sm-4 pull-right" style="">
+                        <h1 style="font-size: 25px; color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
                         Contact Us </h1>
                     </div>
 

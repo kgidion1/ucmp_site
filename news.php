@@ -13,22 +13,31 @@
     background:transparent !important;
     /*color: #444;*/
 }
+.grid-post-meta h3 {
+    color: #5d3a0f;
+    text-transform: capitalize;
+    font-size: 12px !important;
+}
+.grid-post {
+    border: 1px solid #eee;
+    height: 200px;
+}
 </style>
 
 <?php include 'head_css.php';?>
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav_trans.php'; ?>
+      <?php include 'nav.php'; ?>
         <!-- header end-->
         <div class="breadcrumb-v1 b-parllax">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-6 animated text-center">
+                    <div class="col-sm-6 animated text-center" style="margin-top:-4em !important">
                         <h1>Latest News</h1>
                     </div>
-                      <div class="col-sm-3 col-sm-offset-1 animated fadeInRight" data-wow-delay="0.1s">
-                       <img src="images/ucmp.png" style="margin-top:-8em; !important"/>
+                      <div class="col-sm-3 pull-right animated fadeInRight" data-wow-delay="0.1s">
+                       <img src="images/ucmp.png" style="margin-top:-12em !important"/>
                     </div>
                 </div>
             </div>
@@ -54,7 +63,7 @@
                             <p>
                                 $body
                             </p>
-                            <a href='$link' target=\"_blank \" style='".hide_link($link)."'>read more</a>
+                            <a href='$link' target='_blank' style='".hide_link($link)."'>read more</a>
                         </div>
                     </div>
                 </div><!--post col end-->";

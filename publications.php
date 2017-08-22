@@ -93,8 +93,8 @@ line-height: 13px;
   background-size: cover;
   background-position: 0 0;
   background-attachment: fixed;
-  padding: 20px 10px;
-  padding-top: 400px;
+  padding: 40px 10px;
+  padding-top: 200px;
 }
 
 
@@ -105,7 +105,7 @@ line-height: 13px;
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav_trans.php'; ?>
+      <?php include 'nav.php'; ?>
         <!-- header end-->
         <div class="" id="publication">
             <div class="container-fluid">
@@ -114,15 +114,15 @@ line-height: 13px;
                        <img src="images/ucmp.png" width="250x250" style="margin-top:-8em !important"/>
                     </div> -->
 
-                   <div class="col-sm-3 col-sm-push-9" style=" margin-top: -13.2em;">
-                        <h1 style="font-size: 45px; color: #000; text-transform: uppercase;">
+                   <div class="col-sm-4 pull-right" style=" margin-top: 0em;">
+                        <h1 style="font-size:25px;color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
                         Publications </h1>
                     </div>
                 </div>
             </div>
         </div><!--breadcrumb end-->
         <!--<hr>-->
-        <div class="space-10"></div>
+  <div class="space-10"></div>
 <div class="container-fluid">
 	<div class="row">
     <?php
@@ -150,11 +150,8 @@ line-height: 13px;
 
         }
     ?>
-
-
-
 		
 	</div><!--/row-->
 </div><!--/container -->
-         <div class="space-50"></div>
+<div class="space-50"></div>
 <?php include 'footer_js.php';?>

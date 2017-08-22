@@ -20,9 +20,12 @@
   background-position: 0 0;
   background-attachment: fixed;
   padding: 20px 10px;
-  padding-top: 400px;
+  padding-top: 200px;
 }
 
+body{
+    background: #fff;
+}
 </style>
 
 
@@ -30,7 +33,7 @@
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav_trans.php'; ?>
+      <?php include 'nav.php'; ?>
         <!-- header end-->
         <?php
             require_once("src/functions/database.php");
@@ -47,17 +50,18 @@
                    <!--  <div class="col-sm-6 col-sm-push-3 animated text-center">
                         <h1 style="font-size:30px;"></h1>
                     </div> -->
-                    <div class="col-sm-6 col-sm-push-6" style=" margin-top: -15.2em;">
-                        <h1 style="font-size: 45px; color: #fff !important;text-transform: uppercase;">
-                        Minerals and Petroleum </h1>
+                    <div class="col-sm-4 pull-right" style="margin-top:0em;">
+                        <h1 style="font-size: 25px; color:#fff !important;text-transform: capitalize;">
+                        Minerals &amp; Petroleum </h1>
                     </div>
                     
                 </div>
             </div>
+             <br><br>
         </div><!--breadcrumb end-->
-        <section class="section-padded half-image-section" style="margin-top:-2em;">
+        <section class="section-padded half-image-section" style="background: #fff;"> 
                 <div class="container-fluid"  >
-                    <div class="row">
+                    <div class="row" style="margin-top:-4em;">
                          <div class="col-md-5 ">
                             <div class="left-title wow  fadeInUp animated" data-wow-delay="0.2s" 
                             style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
@@ -96,9 +100,9 @@
 //                                    echo "anything here ..............";
                             echo "<h5 href='files/minerals/$mineral_file' class='list-group-item list-group-item-action list-group-item-success' style='padding: 15px;background:#fff;' download >$mineral_name
 
-                          <p class='pull-left'>
-//                          <a target='_blank' class='btn btn-success' href='$mineral_file'><i class='fa fa-eye'></i></a>  
-//                          <a target='_blank'  class='btn btn-primary' href='$mineral_file' download='$mineral_file' ><i class='fa fa-download'></i></a> 
+                          <p class='pull-right'>
+                        <a target='_blank' class='btn btn-success' href='$mineral_file'><i class='fa fa-eye'></i></a>  
+                         <a target='_blank'  class='btn btn-primary' href='$mineral_file' download='$mineral_file' ><i class='fa fa-download'></i></a> 
                             </p>
                             </h5>";   
                             }
@@ -136,16 +140,12 @@
                                     
                                     }
                                     
-                               echo "<h5 href='files/minerals/$petrolic_file' class='list-group-item list-group-item-action list-group-item-success' style='padding: 15px;background:#fff;' download >$petrolic_name
-
+                               echo "<h5 href='files/minerals/$petrolic_file' class='list-group-item list-group-item-action list-group-item-success' style='padding: 15px;background:#fff;' download >".substr($petrolic_name, 0,60)."
                             <p class='pull-right'>
-                              <a target='_blank' class='btn btn-success'  href='$petrolic_file' ><i class='fa fa-eye'></i></a> 
-                              
-                             
+                              <a target='blank' class='btn btn-success'  href='$petrolic_file' ><i class='fa fa-eye'></i></a> 
                               <a target='_blank' class='btn btn-primary'  href='$petrolic_file' download='$petrolic_file'  ><i class='fa fa-download'></i>
                               </a>
-                            </p>
-                            </h5>";   
+                            </p>...</h5>";   
                                 }
 
                             ?>

@@ -124,13 +124,10 @@
                                     $event_url = $event['url'];
                                     echo "<li><a href='$event_url' target='_blank'>$event_name";
                                 }
-
                             ?>
-                           
-    
                             </ul>
                              <!-- <a href="" class="btn btn-xs btn-primary flash-button" style="color: #fff !important;">Register Now</a></a></li> -->
-                             <label class="control-label flash-button"style="color:#09c4f2 !important;">Register Now</label>
+                             <label class="control-label flash-button" style="color:#09c4f2 !important;">Register Now</label>
                     </div>
                 </div><!--end col-->
             </div><!--end row-->
