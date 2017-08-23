@@ -1,0 +1,55 @@
+
+.breadcrumb-v1.min_pet {
+  background: url("../images/minp.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+
+.breadcrumb-v1.about {
+  background: url("../images/banner.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+
+
+.breadcrumb-v1.arch {
+  background: url("../images/banner.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+#members {
+  background: url("../images/new_mem.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+ 
+ .breadcrumb-v1.publications {
+  background: url("../images/publications.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+
+.breadcrumb-v1.contact {
+  background: url("../images/publications.jpg") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 250px;
+}
+

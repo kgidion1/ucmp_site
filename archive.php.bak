@@ -1,0 +1,316 @@
+<style type="text/css"> 
+.modal-dialog {width:100%;
+}
+.modal{
+  border-radius: 10px !important;
+}
+.thumbnail {margin-bottom:6px;
+border: 0  !important;
+}
+
+ .nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+.row .no-gutters {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.row .no-gutters {
+  margin-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.row .no-gutters {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.row .no-gutters > [class^="col-"],
+.row .no-gutters > [class*=" col-"] {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+img.thumbnail:hover{
+    background: transparent !important;
+    opacity: .6; 
+}
+img.thumbnail{
+  border-radius: 8px !important;
+  height: 250px !important;
+  width: 100% !important;
+}
+
+.tabs-primary{
+  background: #888 !important;
+}
+.tabs-primary li a{
+  color: #fff !important;
+  font-size: 22px !important;
+}
+.tabs-primary li a:hover{
+    background: #5B3A10 !important;
+    color: #fff !important;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #5B3A10 !important;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+ #archives{
+  background: url("images/AR.JPG") no-repeat !important;
+  background-size: cover;
+  background-position: 0 0;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  padding-top: 400px;
+
+</style>
+
+<?php include 'head_css.php';?>
+    <body>
+        <!--<div id="preloader"></div>-->
+        <!-- header -->
+      <?php include 'nav_trans.php'; ?>
+        <!-- header end-->
+         <div id="archives">
+            <div class="container-fluid">
+                <div class="row">
+                 <!-- <div class="col-sm-3 animated fadeInLeft" data-wow-delay="0.1s">
+                       <img src="images/ucmp.png" width="250x250" style="margin-top:-8em !important"/>
+                    </div> -->
+
+                   <div class="col-sm-3 col-sm-push-9" style=" margin-top: -15.2em;">
+                        <h1 style="font-size: 45px; color: #fff;text-transform: uppercase;">
+                        Archives </h1>
+                    </div>
+                </div>
+            </div>
+        </div><!--breadcrumb end-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div>
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs tabs-primary" role="tablist" >
+                            <li role="tab" class="active">
+                            <a href="#tab1" aria-controls="tab1" role="tab" 
+                            data-toggle="tab">Conferences</a></li>
+                            <li role="tab"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Workshops</a></li>
+                            <li role="tab"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Seminars</a></li>
+                             <li role="tab"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Presentations</a></li>
+                             <li role="tab"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">Gallery</a></li>
+                           <!--  <li role="presentation"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab">Others</a></li> -->
+                        </ul>
+
+                        <!-- Tab panes -->
+                        <div class="tab-content tab-content-default" style="border: 0 !important;">
+                            <div role="tabpanel" class="tab-pane active" id="tab1">
+                                <div class="row ">
+                    <?php
+                            $conference_sql = "SELECT * FROM archives WHERE category = 'Conferences' ORDER BY id DESC";
+                            $conference_result = $database->query($conference_sql);
+                            while(($conferenceArray[] = mysql_fetch_assoc($conference_result)) || array_pop($conferenceArray));
+                            foreach($conferenceArray as $conference){
+                                $cname = $conference['fname'];
+                                $cfile = $conference['filename'];
+
+                                  echo "<div class='col-sm-2 text-center'>
+                            <div class='box-style-1 border-style  margin-b-30'>
+                             <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
+                                <div class='space-20'></div>
+                                <h3>$cname</h3>
+                                <p>
+                                <span class=''>
+                                <a href='files/archives/$cfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
+                            <a href='files/archives/$cfile' class='btn btn-info btn-xs' role='button' download><i class='fa fa-download'></i></a> 
+                            </span> 
+                                </p>
+                            </div>
+                            </div>";
+
+                            }
+                    
+                     ?>
+                            <!--end col-->
+                    </div>
+
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="tab2">
+                                                  <div class="row">
+                     <?php
+                            $workshop_sql = "SELECT * FROM archives WHERE category = 'Workshops' ORDER BY id DESC";
+                            $workshop_result = $database->query($workshop_sql);
+                            while(($workshopArray[] = mysql_fetch_assoc($workshop_result)) || array_pop($workshopArray));
+                            foreach($workshopArray as $workshop){
+                                $wname = $workshop['fname'];
+                                $wfile = $workshop['filename'];
+
+                                  echo "<div class='col-sm-2 text-center'>
+                            <div class='box-style-1 border-style  margin-b-30'>
+                             <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
+                                <div class='space-20'></div>
+                                <h3>$wname</h3>
+                                <p>
+                                <span class=''>
+                                <a href='files/archives/$wfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
+                            <a href='files/archives/$wfile' class='btn btn-info btn-xs' role='button' download><i class='fa fa-download'></i></a> 
+                            </span> 
+                                </p>
+                            </div>
+                            </div>";
+
+                            }
+                    
+                     ?>
+                            <!--end col-->
+                    </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="tab3">
+                                                <div class="row">
+                     <?php
+                            $seminars_sql = "SELECT * FROM archives WHERE category = 'Seminars' ORDER BY id DESC";
+                            $seminars_result = $database->query($seminars_sql);
+                            while(($seminarsArray[] = mysql_fetch_assoc($seminars_result)) || array_pop($seminarsArray));
+                            foreach($seminarsArray as $seminar){
+                                $sname = $seminar['fname'];
+                                $sfile = $seminar['filename'];
+
+                                  echo "<div class='col-sm-2 text-center'>
+                            <div class='box-style-1 border-style  margin-b-30'>
+                             <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
+                                <div class='space-20'></div>
+                                <h3>$sname</h3>
+                                <p>
+                                <span class=''>
+                                <a href='files/archives/$sfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
+                            <a href='files/archives/$sfile' class='btn btn-info btn-xs' role='button' download><i class='fa fa-download'></i></a> 
+                            </span> 
+                                </p>
+                            </div>
+                            </div>";
+
+                            }
+                    
+                     ?>
+                            <!--end col-->
+                    </div>
+                            </div>
+
+
+                             <div role="tabpanel" class="tab-pane" id="tab4">
+                                                  <div class="row">
+
+                         <?php
+                            $presentation_sql = "SELECT * FROM archives WHERE category = 'Presentations' ORDER BY id DESC";
+                            $presentation_result = $database->query($presentation_sql);
+                            while(($presentationArray[] = mysql_fetch_assoc($presentation_result)) || array_pop($presentationArray));
+                            foreach($presentationsArray as $presentation){
+                                $pname = $presentation['fname'];
+                                $pfile = $presentation['filename'];
+
+                                  echo "<div class='col-sm-2 text-center'>
+                            <div class='box-style-1 border-style  margin-b-30'> 
+                             <span><i class='fa fa-file fa-4x' aria-hidden='true'></i></span>
+                                <div class='space-20'></div>
+                                <h3>$pname</h3>
+                                <p>
+                                <span class=''>
+                                <a href='files/archives/$pfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
+                            <a href='files/archives/$pfile' class='btn btn-info btn-xs' role='button' download><i class='fa fa-download'></i></a> 
+                            </span> 
+                                </p>
+                            </div>
+                            </div>";
+
+                            }
+                    
+                     ?>
+                            <!--end col-->
+                    </div>
+                            </div>
+                <div role="tabpanel" class="tab-pane" id="tab5">
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="tabs-left">
+                        <ul class="nav nav-tabs">
+                            
+                              <?php
+                            $gallery = array();
+                            $sql = "SELECT DISTINCT year FROM archives WHERE category = 'Gallery' ORDER BY year DESC";
+                            $years_result = $database->query($sql); 
+                            while(($yearsArray[]= mysql_fetch_assoc($years_result))|| array_pop($yearsArray));
+                            $y = 1;
+                                foreach($yearsArray as $current_year){
+                                    
+                                    $this_year = $current_year['year'];
+
+                                  
+                               
+                         
+                            
+                                       
+                                  $y++; 
+                                }
+
+                         //      var_dump($year);
+                                
+
+
+                        ?>
+
+                         
+                        </ul>
+                        <div class="tab-content floating-tab-content">
+                      
+                      <div id="tab-3" class="tab-pane active">
+                <div class="row no-gutters">
+                <?php
+                    $images_sql = "SELECT * FROM archives WHERE category = 'Gallery' ORDER BY id DESC";
+                    $images_result = $database->query($images_sql);
+                    while(($imagesArray[] = mysql_fetch_assoc($images_result)) || array_pop($imagesArray));
+                    foreach($imagesArray as $image){
+                        $image_name = $image['fname'];
+                        $image_file = $image['filename'];
+                        $image_year = $image['year'];
+                        echo "<div class='col-lg-3 col-sm-4 col-xs-6'>
+              <a title='$image_name' href='#'><img class='thumbnail' 
+              src='files/archives/$image_file'></a>
+              <span>$image_name</span> <span class='badge' style='float: center;'>$image_year</span></div>";
+                    }
+
+                ?>
+           </div>
+                </div>
+
+               </div>
+               </div>
+               </div>
+               </div>
+<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title">Heading</h3>
+    </div>
+    <div class="modal-body">
+        
+    </div>
+    <!-- <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+    </div> -->
+   </div>
+  </div>
+</div>
+
+        </div>
+    </div>
+
+     </div>
+                    <!--default tabs end-->
+                </div>
+            </div>
+        </div>
+<div class="space-70"></div>
+<?php include 'footer_js.php';?>
