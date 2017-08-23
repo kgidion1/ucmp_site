@@ -1,2 +1,4 @@
 # uploaded files / data 
 /files
+/.idea
+/src/functions/config.php
