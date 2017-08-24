@@ -63,7 +63,7 @@
                             <p>
                                 $body
                             </p>
-                            <a href='$link' target='_blank' style='".hide_link($link)."'>read more</a>
+                            <a href='$link' target='_blank' style='".hide_link($link)."'></a>
                         </div>
                     </div>
                 </div><!--post col end-->";
