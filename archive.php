@@ -103,7 +103,7 @@
 <body>
 <!--<div id="preloader"></div>-->
 <!-- header -->
-<?php include 'nav.php'; ?>
+<?php include 'nav_trans.php'; ?>
 <!-- header end-->
 <div id="archives">
     <div class="container-fluid">

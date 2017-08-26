@@ -105,7 +105,7 @@ line-height: 13px;
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav.php'; ?>
+      <?php include 'nav_trans.php'; ?>
         <!-- header end-->
         <div class="" id="publication">
             <div class="container-fluid">
@@ -115,7 +115,7 @@ line-height: 13px;
                     </div> -->
 
                    <div class="col-sm-4 pull-right" style=" margin-top: 0em;">
-                        <h1 style="font-size:25px;color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
+                        <h1 style="font-size:45px;color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
                         Publications </h1>
                     </div>
                 </div>

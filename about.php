@@ -17,13 +17,13 @@
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav.php'; ?>
+      <?php include 'nav_trans.php'; ?>
         <!-- header end-->
        <div id="about_us" style="background: #888;">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3 col-sm-push-9" style=" margin-top:0em;">
-                        <h1 style="font-size: 25px; color: #fff;background: #444;padding:5px;text-transform:
+                        <h1 style="font-size: 45px; color: #fff;background: #444;padding:5px;text-transform:
                          uppercase;">About Us</h1>
                     </div>
                 </div>

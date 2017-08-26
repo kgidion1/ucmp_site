@@ -20,7 +20,7 @@
   background-position: 0 0;
   background-attachment: fixed;
   padding: 20px 10px;
-  padding-top: 200px;
+  padding-top: 250px;
 }
 
 body{
@@ -33,7 +33,7 @@ body{
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav.php'; ?>
+      <?php include 'nav_trans.php'; ?>
         <!-- header end-->
         <?php
             require_once("src/functions/database.php");
@@ -50,8 +50,8 @@ body{
                    <!--  <div class="col-sm-6 col-sm-push-3 animated text-center">
                         <h1 style="font-size:30px;"></h1>
                     </div> -->
-                    <div class="col-sm-4 pull-right" style="margin-top:0em;">
-                        <h1 style="font-size: 25px; color:#fff !important;text-transform: capitalize;">
+                    <div class="col-sm-6 pull-right" style="margin-top:0em;">
+                        <h1 style="font-size: 45px; color: #fff;background: #444;padding:5px;text-transform: uppercase;">
                         Minerals &amp; Petroleum </h1>
                     </div>
                     

@@ -6,19 +6,19 @@
   background-position: 0 0;
   background-attachment: fixed;
   padding: 40px 10px;
-  padding-top: 200px;
+  padding-top: 250px;
 }
 </style>
     <body>
         <!--<div id="preloader"></div>-->
         <!-- header -->
-      <?php include 'nav.php'; ?>
+      <?php include 'nav_trans.php'; ?>
         <!-- header end-->
          <div class="" id="members">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-4 pull-right" style="margin-top:0em;">
-                        <h1 style="font-size: 25px; color: #fff;background: #444;padding: 5px;text-transform: uppercase;">
+                        <h1 style="font-size: 45px; color: #fff;background: #444;padding: 5px;text-transform: uppercase;">
                        Membership </h1>
                     </div>
                     </div>
