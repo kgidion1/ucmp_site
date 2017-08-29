@@ -51,7 +51,7 @@ body{
                         <h1 style="font-size:30px;"></h1>
                     </div> -->
                     <div class="col-sm-6 pull-right" style="margin-top:0em;">
-                        <h1 style="font-size: 45px; color: #fff;background: #444;padding:5px;text-transform: uppercase;">
+                        <h1 style="font-size: 45px; color: #fff;text-transform: uppercase;">
                         Minerals &amp; Petroleum </h1>
                     </div>
                     

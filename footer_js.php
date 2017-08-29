@@ -32,7 +32,7 @@
                     <div class="row">
                         <div class="col-sm-12 text-center text-white">
                             <span>&copy; Copyright 2017 Uganda Chamber of Mines and Petroleum. All Rights Reserved | Powered By: 
-                               <a href="http://www.hivetechug.com" target="_blank">Hive Technologies Ltd</a></span>
+                               <a href="https://www.hivetechug.com" target="_blank">Hive Technologies Ltd</a></span>
                         </div>
         
                     </div>

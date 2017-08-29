@@ -113,7 +113,7 @@
                </div> -->
 
             <div class="col-sm-3 col-sm-push-9" style="margin-top:0em;">
-                <h1 style="font-size: 25px; color: #fff;background: #444;padding: 5px; text-transform: uppercase;">
+                <h1 style="font-size: 25px; color: #fff;text-transform: uppercase;">
                     Archives </h1>
             </div>
         </div>
