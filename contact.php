@@ -5,15 +5,16 @@ if(isset($_POST['submit'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $message = $_POST['message'];
+    $message = wordwrap($message, 70);
 
-    $to = "info@ucmp.ug";
+    $to = "info@ucmp.ug";   //  check by inserting your email address here
 
     $subject = 'Request From Website';
 
     $headers = "From: " . strip_tags($email) . "\r\n";
     $headers .= "Reply-To: ". strip_tags($email) . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "MIME-Version: 1.0 \r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";      //  charset=ISO-8859-1
 
     $message = '<html><body>';
     $message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';

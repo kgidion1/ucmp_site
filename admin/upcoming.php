@@ -128,8 +128,6 @@ if(isset($_POST['evname']) && isset($_POST['save_e'])){
     
            // return $resultArray;
 
-            
-
             ?>
               <table class="table table-hover">
                 <tr>
@@ -245,9 +243,9 @@ function remove_event(id){
 
 $('#event_file').on('input',function () {
     if($(this).get(0).files.length > 0)
-        $('#web_url').attr('disabled',true);
+        $('.disable-url').attr('disabled','disabled');
     else
-        $('#web_url').attr('disabled',false);
+        $('.disable-url').removeAttribute('disabled');
 });
 $('#web_url').on('input',function () {
     if($(this).val().length)

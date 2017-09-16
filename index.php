@@ -1,3 +1,4 @@
+
 <style>
     .mytext{
         /*overflow: hidden;*/
@@ -139,7 +140,7 @@
             <div class="space-20"></div>
                <div class="row">
                     <div class="col-sm-6 section-padded" style="margin-top:-8em;">
-                    <div class="heading-style-center wow animated  fadeInUp" data-wow-delay="0.1s">
+                    <div class="heading-style-center wow animated fadeInUp" data-wow-delay="0.1s">
                     <h2>Tweets by UgandaChamber</h2>
                      </div>
                         <div class="twt_wrap" >
@@ -260,3 +261,11 @@
         </div>
 
        <?php include 'footer_js.php';?>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+//                var str_len = 'Lorem ipsum dolor.';
+////                alert(str_len.length);
+//                alert(str_len.substr(0, 11));  // using the substring method ..........
+            });
+        </script>
