@@ -198,18 +198,21 @@ if(isset($_POST['evname']) && isset($_POST['save_e'])){
 
 <?php include 'js.php'; ?>
 <script type="text/javascript">
+//    $('#evname_error').addClass('hidden');
+//    $('#evfile_error').addClass('hidden');
+//    $('#evlink_error').addClass('hidden');
 
 function save_event(e){
   $('#evname_error').addClass('hidden');
   $('#evfile_error').addClass('hidden');
   $('#evlink_error').addClass('hidden');
-  
-  if($('#evname').val() == ""){
-    e.preventDefault();
-    $('#evname_error').removeClass('hidden');
-    return 1;
-  }
-  else if(!$('#web_url').val().match(/\bhttp/i) ){
+
+//  if($('#evname').val() == ""){
+//    e.preventDefault();
+//    $('#evname_error').removeClass('hidden');
+//    return 1;
+//  }
+  if(!$('#web_url').val().match(/\bhttp/i) ){
       e.preventDefault();
       $('#web_url').val(' ');
       $('#evlink_error').removeClass('hidden');
@@ -247,9 +250,12 @@ $('#event_file').on('input',function () {
     else
         $('.disable-url').removeAttribute('disabled');
 });
+
 $('#web_url').on('input',function () {
-    if($(this).val().length)
+    if($(this).val().length){
         $('.disable-file').prop('disabled','true');
+    }
+
     else
         $('.disable-file').prop('disabled','false');
 });

@@ -1,16 +1,16 @@
 <?php error_reporting(0); include 'header.php'; if(!isset($_SESSION['uid'])){ header("location:login.php");}?>
   <!-- Left side column. contains the logo and sidebar -->
 <?php include 'side.php';  
-if (isset($_POST['submit']))
- {
-
-echo '<script  type="text/javascript">
-
-   location.reload();
-   
-   </script>';
-
-	 }
+//if (isset($_POST['submit']))
+// {
+//
+//echo '<script  type="text/javascript">
+//
+//   location.reload();
+//
+//   </script>';
+//
+//	 }
 ?>
  
  
@@ -37,67 +37,77 @@ echo '<script  type="text/javascript">
             <div class="container">
     <form action="archives.php" method="post" enctype="multipart/form-data" >
         <div class="row">
-                 <div class="col-md-2">
+            <div class="row">
+                <div class="col-md-2">
                     <div class="form-group form-group-sm">
                         <label for="ptitle" class="control-label">Publication Title</label>
                         <input type="text" class="form-control" id="ptitle" placeholder="Publication Title">
                     </div>
                 </div>
-                  <div class="col-md-3">
+                <div class="col-md-3">
                     <div class="form-group">
-                    <label for="logo" class="control-label">Category</label>
-                     <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="cat"  id="filecategory">
-                  <option selected="selected" value="Conferences">Conferences</option>
-                  <option value="Workshops">Workshops</option>
-                   <option value="Seminars">Seminars</option>
-                     <option value="Presentations">Presentations</option>
-                       <option value="Gallery">Gallery</option>
-                </select>
+                        <label for="logo" class="control-label">Category</label>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
+                                aria-hidden="true" name="cat" id="filecategory">
+                            <option selected="selected" value="Conferences">Conferences</option>
+                            <option value="Workshops">Workshops</option>
+                            <option value="Seminars">Seminars</option>
+                            <option value="Presentations">Presentations</option>
+                            <option value="Gallery">Gallery</option>
+                        </select>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="form-group form-group-sm">
-                        <label for="evnanne" class="control-label">File Name / Caption </label>
+                        <label for="fname" class="control-label">File Name / Caption </label>
                         <input type="text" class="form-control" id="evname" name="fname" placeholder="File Name" required="required">
                         <p class="text-red hidden" id="evname_error">Please Enter an Event Name</p>
                     </div>
                 </div>
 
-                  <div class="col-md-3">
+                <div class="col-md-4">
                     <div class="form-group">
                         <label for="pdf" class="control-label">File(.pdf,jpg,png,jpeg,docx,doc,ppt)</label>
-                      <input id="exampleInputFile" type="file"  name="afile">
+                        <input id="exampleInputFile" type="file" name="afile">
                     </div>
                 </div>
-                           <div class="col-md-2">
+                <div class="col-md-2" hidden="hidden">
                     <div class="form-group  hidden" id="filedate">
-                    <label for="logo" class="control-label">Year</label>
-                     <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" name="year">
-                  <option selected="selected" value="2017">2017</option>
-                  <option value="2016">2016</option>
-                   <option value="2015">2015</option>
-                     <option value="2014">2014</option>
-                       <option value="2013">2013</option>
-                        <option value="2012">2012</option>
-                         <option value="2011">2011</option>
-                          <option value="2010">2010</option>
-                </select>
+                        <label for="logo" class="control-label">Year</label>
+                        <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
+                                aria-hidden="true" name="year">
+                            <option selected="selected" value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                        </select>
                     </div>
                 </div>
-                
-                  <div class="col-md-2">
-                    <div class="form-group" style="margin-top: 1em;">
-                           <button type="submit" name="submit" class="btn btn-success btn-block btn-flat" onclick="check_url(event)" ><i class="fa fa-upload"></i> Upload</button>
-                    </div>
-                </div>
-               <div class="col-md-12">
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <div class="form-group form-group-sm">
-                        <label for="evnanne" class="control-label">Url </label>
-                        <input type="text" class="form-control" id="aurl" name="aurl" placeholder="Begin with http:// or http://">
-                        <p class="text-red hidden" id="evname_error">Invalid URL: You must begin with either http or https</p>
+                        <label for="aurl" class="control-label">Url </label>
+                        <input type="text" class="form-control" id="aurl" name="aurl" placeholder="Begin with http:// or https://">
+                        <p class="text-red hidden" id="aurl_error">Invalid URL: You must begin with either http or https</p>
                     </div>
                 </div>
+
+                <div class="col-md-2">
+                    <div class="form-group" style="margin-top: 1em;">
+                        <button type="submit" name="submit" class="btn btn-success btn-block btn-flat pull-right"
+                                onclick="check_url(event)"><i class="fa fa-upload"></i> Upload
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </form>
     
@@ -106,10 +116,10 @@ echo '<script  type="text/javascript">
        //header("Location: $url");
          if(isset($_POST['submit']) && isset($_POST['fname'])){
 
-             echo '<script src="" type="text/javascript">
-              window.location.reload();
-              
-              </script>';
+//             echo '<script src="" type="text/javascript">
+//              window.location.reload();
+//
+//              </script>';
 
              $file_dir = "../files/archives/";
 
@@ -377,20 +387,17 @@ echo '<script  type="text/javascript">
     })
 
     function check_url(e) {
-        $('#evname_error').addClass('hidden');
+        $('#aurl_error').addClass('hidden');
 
-        if($('#aurl').val() != ""){
-            if(!$('#aurl').val().match(/\bhttp/i)){
-                e.preventDefault();
-                $('#aurl').val(' ');
-                $('#evname_error').removeClass('hidden');
-            }
-            else {
-                e.default();
-            }
+        if (!$('#aurl').val().match(/\bhttp/i)) {
+            e.preventDefault();
+            $('#aurl').val(' ');
+            $('#aurl_error').removeClass('hidden');
+            return 1;
         }
         else {
             e.default();
         }
+
     }
 </script>
