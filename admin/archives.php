@@ -389,11 +389,15 @@
     function check_url(e) {
         $('#aurl_error').addClass('hidden');
 
-        if (!$('#aurl').val().match(/\bhttp/i)) {
-            e.preventDefault();
-            $('#aurl').val(' ');
-            $('#aurl_error').removeClass('hidden');
-            return 1;
+        if($('#aurl').val() !== ""){
+            if (!$('#aurl').val().match(/\bhttp/i)) {
+                e.preventDefault();
+                $('#aurl').val(' ');
+                $('#aurl_error').removeClass('hidden');
+                return 1;
+            } else {
+                e.default();
+            }
         }
         else {
             e.default();

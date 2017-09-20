@@ -163,7 +163,7 @@
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$cfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
-                            <a target='_blank' href='$cfile' class='btn btn-info btn-xs' role='button'><i class='fa fa-download'></i></a> 
+                            <a target='_blank' href='$cfile' download='$cfile' class='btn btn-info btn-xs' role='button'><i class='fa fa-download'></i></a> 
                             </span> 
                                 </p>
                             </div>
@@ -203,7 +203,7 @@
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$wfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
-                            <a target='_blank' href='$wfile' class='btn btn-info btn-xs' role='button' ><i class='fa fa-download'></i></a> 
+                            <a target='_blank' href='$wfile' download='$wfile' class='btn btn-info btn-xs' role='button' ><i class='fa fa-download'></i></a> 
                             </span> 
                                 </p>
                             </div>
@@ -242,7 +242,7 @@
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$sfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
-                            <a target='_blank' href='$sfile' class='btn btn-info btn-xs' role='button' ><i class='fa fa-download'></i></a> 
+                            <a target='_blank' href='$sfile' download='$sfile' class='btn btn-info btn-xs' role='button' ><i class='fa fa-download'></i></a> 
                             </span> 
                                 </p>
                             </div>
@@ -282,7 +282,7 @@
                                 <p>
                                 <span class=''>
                                 <a target='_blank' href='$pfile' class='btn btn-default btn-xs' role='button'><i class='fa fa-eye'></i></a>
-                            <a target='_blank' href='$pfile' class='btn btn-info btn-xs' role='button'><i class='fa fa-download'></i></a> 
+                            <a target='_blank' href='$pfile' download='$pfile' class='btn btn-info btn-xs' role='button'><i class='fa fa-download'></i></a> 
                             </span> 
                                 </p>
                             </div>

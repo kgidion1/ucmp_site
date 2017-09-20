@@ -212,11 +212,15 @@ function save_event(e){
 //    $('#evname_error').removeClass('hidden');
 //    return 1;
 //  }
-  if(!$('#web_url').val().match(/\bhttp/i) ){
-      e.preventDefault();
-      $('#web_url').val(' ');
-      $('#evlink_error').removeClass('hidden');
-      return 1;
+  if($('#web_url').val() !== ""){
+      if(!$('#web_url').val().match(/\bhttp/i) ){
+          e.preventDefault();
+          $('#web_url').val(' ');
+          $('#evlink_error').removeClass('hidden');
+          return 1;
+      } else {
+          e.default();
+      }
   }
   else {
     e.default();
