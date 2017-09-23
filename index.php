@@ -124,7 +124,7 @@
                                     $event_name = $event['name'];
                                     $event_url = $event['url'];
                                     if($filename != ""){
-                                        echo "<li><a href='$filename' target='_blank'>$event_name</a>";
+                                        echo "<li><a href='files/$filename' target='_blank'>$event_name</a>";
                                     }
                                     else echo "<li><a href='$event_url' target='_blank'>$event_name</a>";
                                 }
