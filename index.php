@@ -1,4 +1,3 @@
-
 <style>
     .mytext{
         /*overflow: hidden;*/
@@ -121,9 +120,13 @@
 
                                 while(($eventsArray[]= mysqli_fetch_assoc($events_result))|| array_pop($eventsArray));
                                 foreach($eventsArray as $event){
+                                    $filename = $event['filename'];
                                     $event_name = $event['name'];
                                     $event_url = $event['url'];
-                                    echo "<li><a href='$event_url' target='_blank'>$event_name";
+                                    if($filename != ""){
+                                        echo "<li><a href='$filename' target='_blank'>$event_name</a>";
+                                    }
+                                    else echo "<li><a href='$event_url' target='_blank'>$event_name</a>";
                                 }
                             ?>
                             </ul>

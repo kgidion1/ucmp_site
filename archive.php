@@ -71,6 +71,10 @@
         border-bottom-color: transparent;
     }
 
+    .tab-pane.active {
+        display:block;
+    }
+
     #archives {
         background: url("images/AR.JPG") no-repeat !important;
         /*background-size: cover;
@@ -125,12 +129,10 @@
             <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs tabs-primary" role="tablist">
-                    <li role="tab">
-                        <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Conferences</a></li>
+                    <li role="tab"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Conferences</a></li>
                     <li role="tab" class="active"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Workshops</a></li>
                     <li role="tab"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Seminars</a></li>
-                    <li role="tab"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Presentations</a>
-                    </li>
+                    <li role="tab"><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab">Presentations</a></li>
                     <li role="tab"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab">Gallery</a></li>
                     <!--  <li role="presentation"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab">Others</a></li> -->
                 </ul>

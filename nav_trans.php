@@ -41,7 +41,7 @@
                                     if($upcoming_event_url != ""){
                                         echo "<li><a href='$upcoming_event_url' target='_blank'>$upcoming_event_name</a></li>"; 
                                     } else{
-                                        echo "<li><a href='files/$upcoming_event_file' target='_blank'>$upcoming_event_name</a></li>";  
+                                        echo "<li><a href='files/$upcoming_event_file' download='files/$upcoming_event_file' target='_blank'>$upcoming_event_name</a></li>";
                                     }    
                                 }
                                    ?>

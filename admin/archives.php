@@ -58,22 +58,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
-                    <div class="form-group form-group-sm">
-                        <label for="fname" class="control-label">File Name / Caption </label>
-                        <input type="text" class="form-control" id="evname" name="fname" placeholder="File Name" required="required">
-                        <p class="text-red hidden" id="evname_error">Please Enter an Event Name</p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
+                <div class="col-md-2 hidden" id="filedate">
                     <div class="form-group">
-                        <label for="pdf" class="control-label">File(.pdf,jpg,png,jpeg,docx,doc,ppt)</label>
-                        <input id="exampleInputFile" type="file" name="afile">
-                    </div>
-                </div>
-                <div class="col-md-2" hidden="hidden">
-                    <div class="form-group  hidden" id="filedate">
                         <label for="logo" class="control-label">Year</label>
                         <select class="form-control select2 select2-hidden-accessible" style="width: 100%;" tabindex="-1"
                                 aria-hidden="true" name="year">
@@ -86,6 +72,21 @@
                             <option value="2011">2011</option>
                             <option value="2010">2010</option>
                         </select>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="form-group form-group-sm">
+                        <label for="fname" class="control-label">File Name / Caption </label>
+                        <input type="text" class="form-control" id="evname" name="fname" placeholder="File Name" required="required">
+                        <p class="text-red hidden" id="evname_error">Please Enter an Event Name</p>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label for="pdf" class="control-label">File(.pdf,jpg,png,jpeg,docx,doc,ppt)</label>
+                        <input id="afile" type="file" name="afile">
                     </div>
                 </div>
 
@@ -182,7 +183,7 @@
                      }
 
 
-                 } else {
+                 } elseif($file_name != "" && $uploadOK = 0) {
                      echo "<br/><div style='color:red'> Sorry, Only pdf,jpg,png,jpeg,docx,doc and ppt files can be Uploaded.</div>";
                  }
              }
